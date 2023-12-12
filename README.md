@@ -1,7 +1,7 @@
-<h1 align="center"> Web Store </h1>
+<h1 align="center"> Projeto Calculadora de Investimentos </h1>
 
 <p align="center">
-Projeto de comércio eletrônico. Desenvolvido em curso da <a href="https://portalhashtag.com/">HashTag Treinamentos</a><br/>
+Projeto de Calculadora de Investimentos. Desenvolvido em curso da <a href="https://portalhashtag.com/">HashTag Treinamentos</a><br/>
 
 </p>
 
@@ -18,7 +18,7 @@ Projeto de comércio eletrônico. Desenvolvido em curso da <a href="https://port
 <br>
 
 <p align="center">
-  <img alt="projeto Web Store" src=".github/preview.png" width="100%">
+  <img alt="Projeto Calculadora de Investimentos" src=".github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -28,10 +28,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML e CSS
 - JavaScript
 - Git e Github
+- tailwind CSS
 
 ## 💻 Projeto
 
-Esse projeto é uma web de comércio eletrônico básico, desenvolvido em curso da HashTag.
+Esse projeto é uma Calculadora de Investimentos, desenvolvido em curso da HashTag.
 
 - [Acesse o projeto finalizado, online](https://alexvcsantos.github.io/webStore/)
 
