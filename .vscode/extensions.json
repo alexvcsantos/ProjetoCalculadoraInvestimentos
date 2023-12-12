@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "PKief.material-icon-theme",
+    "ritwickdey.LiveServer",
+    "bracketpaircolordlw.bracket-pair-color-dlw",
+    "formulahendry.code-runner",
+    "visualstudioexptteam.vscodeintellicod",
+    "dracula-theme.theme-dracula",
+  ]
+}
