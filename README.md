@@ -25,16 +25,17 @@ Projeto de Calculadora de Investimentos. Desenvolvido em curso da <a href="https
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML e CSS
-- JavaScript
-- Git e Github
-- tailwind CSS
+-   HTML e CSS
+-   JavaScript
+-   Git e Github
+-   tailwind CSS
+-   Vitejs
 
 ## 💻 Projeto
 
 Esse projeto é uma Calculadora de Investimentos, desenvolvido em curso da HashTag.
 
-- [Acesse o projeto finalizado, online](https://alexvcsantos.github.io/webStore/)
+-   [Acesse o projeto finalizado, online](https://alexvcsantos.github.io/webStore/)
 
 ## :memo: Licença
 
