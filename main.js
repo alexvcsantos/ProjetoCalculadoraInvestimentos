@@ -1,5 +1,6 @@
 import { generateReturnsArray } from "./src/investmentGoals"
 import { Chart } from "chart.js/auto"
+import { createTable } from "./src/table"
 
 // const calculateButton = document.getElementById('calculate-results')
 const form = document.getElementById("investment-form")
@@ -9,7 +10,35 @@ const progressionChart = document.getElementById("progression")
 let doughnutCharReference = {}
 let progressionChartReference = {}
 
-function formatCurrency(value) {
+const columnsArray = [
+    { columnLabel: "Mês", accessor: "month" },
+    {
+        columnLabel: "Total Investido",
+        accessor: "investedAmount",
+        format: (numberInfo) => formatCurrencyToTable(numberInfo),
+    },
+    {
+        columnLabel: "Rendimento Mensal",
+        accessor: "interestReturns",
+        format: (numberInfo) => formatCurrencyToTable(numberInfo),
+    },
+    {
+        columnLabel: "Rendimento Total",
+        accessor: "totalInterestReturns",
+        format: (numberInfo) => formatCurrencyToTable(numberInfo),
+    },
+    {
+        columnLabel: "Quantia Total",
+        accessor: "totalAmount",
+        format: (numberInfo) => formatCurrencyToTable(numberInfo),
+    },
+]
+
+function formatCurrencyToTable(value) {
+    return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+}
+
+function formatCurrencyToGraph(value) {
     return value.toFixed(2)
 }
 
@@ -46,9 +75,9 @@ function renderProgression(e) {
             datasets: [
                 {
                     data: [
-                        formatCurrency(finalInvestmentObject.investedAmount),
-                        formatCurrency(finalInvestmentObject.totalInterestReturns * (1 - taxRate / 100)),
-                        formatCurrency(finalInvestmentObject.totalInterestReturns * (taxRate / 100)),
+                        formatCurrencyToGraph(finalInvestmentObject.investedAmount),
+                        formatCurrencyToGraph(finalInvestmentObject.totalInterestReturns * (1 - taxRate / 100)),
+                        formatCurrencyToGraph(finalInvestmentObject.totalInterestReturns * (taxRate / 100)),
                     ],
                     backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"],
                     hoverOffset: 4,
@@ -64,12 +93,16 @@ function renderProgression(e) {
             datasets: [
                 {
                     label: "Total Investido",
-                    data: returnsArray.map((investmentObject) => formatCurrency(investmentObject.investedAmount)),
+                    data: returnsArray.map((investmentObject) =>
+                        formatCurrencyToGraph(investmentObject.investedAmount)
+                    ),
                     backgroundColor: "rgb(255, 99, 132)",
                 },
                 {
                     label: "Retorno do Investimento",
-                    data: returnsArray.map((investmentObject) => formatCurrency(investmentObject.interestReturns)),
+                    data: returnsArray.map((investmentObject) =>
+                        formatCurrencyToGraph(investmentObject.interestReturns)
+                    ),
                     backgroundColor: "rgb(54, 162, 235)",
                 },
             ],
@@ -82,6 +115,8 @@ function renderProgression(e) {
             },
         },
     })
+
+    createTable(columnsArray, returnsArray, "results-table")
 }
 
 function isObjectEmpty(obj) {
@@ -89,7 +124,7 @@ function isObjectEmpty(obj) {
 }
 
 function resetCharts() {
-    if(!isObjectEmpty(doughnutCharReference) && !isObjectEmpty(progressionChartReference)) {
+    if (!isObjectEmpty(doughnutCharReference) && !isObjectEmpty(progressionChartReference)) {
         doughnutCharReference.destroy()
         progressionChartReference.destroy()
     }
@@ -140,5 +175,5 @@ for (const formElement of form) {
     }
 }
 
-// form.addEventListener("submit", renderProgression)
+form.addEventListener("submit", renderProgression)
 clearFormButton.addEventListener("click", clearForm)
