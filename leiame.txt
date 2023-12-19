@@ -1,0 +1,18 @@
+projeto usando vite
+-------------------------------------
+- rodar no terrminal
+npm run dev
+--------------------------------------
+
+arquivo viteconfig.txt
+- copiar conteudo, criar um arquivo vite.config.js e colar
+----------------------------------------------------------------
+- depois de finalizado rodar
+npm run build
+
+----------------------------------------------------------------
+https://alexvcsantos.github.io/webStore/
+arquivo githubpages.txt
+- entrar em settings, pages, github actions, create your own
+    criar arquivo main.yml
+    e copiar todo conteudo do arquivo e fazer o commit

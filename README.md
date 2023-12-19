@@ -21,6 +21,10 @@ Projeto de Calculadora de Investimentos. Desenvolvido em curso da <a href="https
   <img alt="Projeto Calculadora de Investimentos" src=".github/preview.png" width="100%">
 </p>
 
+<p align="center">
+  <img alt="Projeto Calculadora de Investimentos" src=".github/preview2.png" width="100%">
+</p>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
