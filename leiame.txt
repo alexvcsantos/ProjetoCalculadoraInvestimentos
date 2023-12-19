@@ -5,7 +5,9 @@ npm run dev
 --------------------------------------
 
 arquivo viteconfig.txt
-- copiar conteudo, criar um arquivo vite.config.js e colar
+- copiar conteudo, criar um arquivo vite.config.js e colar (editar de acordo com o projeto)
+----------------------------------------------------------------
+- copiar pastas do projeto img, src, dentro da pasta public
 ----------------------------------------------------------------
 - depois de finalizado rodar
 npm run build
