@@ -39,7 +39,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Esse projeto é uma Calculadora de Investimentos, desenvolvido em curso da HashTag.
 
--   [Acesse o projeto finalizado, online](https://alexvcsantos.github.io/webStore/)
+-   [Acesse o projeto finalizado, online](https://alexvcsantos.github.io/ProjetoCalculadoraInvestimentos/)
 
 ## :memo: Licença
 
